@@ -5,7 +5,15 @@ import './App.css'
 import LeafletMap from './LeafletMap'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [data, setData] = useState(null)
+  const apiKey = ''
+  function trackAddress() {
+    // const data = fetch(`https://geo.ipify.org/api/v2/country?apiKey=${apiKey}&ipAddress=8.8.8.8`)
+    // console.log(data);
+    fetch(`https://geo.ipify.org/api/v2/country?apiKey=${apiKey}&ipAddress=192.212.174.101`)
+      .then(response => response.json())
+      .then(data => console.log('Data: ', data));
+  }
 
   return (
     <section className='tracker-section'>
@@ -13,7 +21,7 @@ function App() {
         <h1 className='primary-heading'>IP Address Tracker</h1>
         <div className='search-container'>
           <input className='search-input' type='text' placeholder='Enter IP Address' />
-          <button className='btn search-btn'><ion-icon name="chevron-forward-outline"></ion-icon></button>
+          <button onClick={trackAddress} className='btn search-btn'><ion-icon name="chevron-forward-outline"></ion-icon></button>
         </div>
       </div>
       <div className='tracker-map-container '>
