@@ -90,6 +90,8 @@ body {
   background-color: #fff;
 }
 .search-input {
+  background-color: #fff;
+  color: #000;
   font-size: 18px;
   padding: 5px;
   border: none;
@@ -150,6 +152,7 @@ body {
 .result-content {
   font-size: 22px;
   margin: 5px 0;
+  color: #000;
 }
 .tracker-map-container {
   z-index: 5;
