@@ -1,0 +1,120 @@
+@media only screen and (max-width: 1200px) {
+  .tracker-results-container {
+    position: absolute;
+    z-index: 500;
+    top: 200px;
+    width: 80%;
+  }
+  .result-content {
+    font-size: 20px;
+    margin: 5px 0;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .tracker-results-container {
+    top: 250px;
+  }
+
+  .tracker-result-textbox {
+    /* padding: 10px; */
+    margin: 20px 10px;
+    /* text-align: lef; */
+  }
+}
+@media only screen and (max-width: 768px) {
+  .tracker-hero-section {
+    height: 250px;
+  }
+  .tracker-results-container {
+    top: 200px;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+  }
+  .tracker-result-textbox {
+    padding: 10px;
+    margin: 0 10px;
+  }
+  .tracker-result-textbox:first-child,
+  .tracker-result-textbox:nth-child(2) {
+    border-right: none;
+
+    border-bottom: solid 1px var(--grey-color);
+    /* background-color: red; */
+  }
+  .tracker-result-textbox:nth-child(3) {
+    border-right: none;
+  }
+
+  .result-title {
+    font-size: 14px;
+    color: var(--grey-color);
+    margin: 5px 0;
+  }
+  .result-content {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  .error-text {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .primary-heading {
+    font-size: 26px;
+    padding: 10px;
+  }
+  .search-input {
+    width: 300px;
+    font-size: 18px;
+  }
+  .tracker-results-container {
+    top: 200px;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+  }
+  .tracker-result-textbox {
+    padding: 5px;
+  }
+  .result-title {
+    font-size: 12px;
+    color: var(--grey-color);
+    margin: 5px 0;
+  }
+  .result-content {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .search-input {
+    width: 200px;
+    font-size: 18px;
+  }
+  .tracker-results-container {
+    top: 175px;
+    grid-template-columns: 1fr;
+    width: 50%;
+  }
+  .tracker-result-textbox {
+    text-align: center;
+  }
+  .tracker-result-textbox:first-child,
+  .tracker-result-textbox:nth-child(2),
+  .tracker-result-textbox:nth-child(3) {
+    border-bottom: none;
+    /* background-color: red; */
+  }
+  .error-text {
+    font-size: 12px;
+  }
+  .map-container {
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .tracker-results-container {
+    top: 175px;
+    grid-template-columns: 1fr;
+    width: 65%;
+  }
+}

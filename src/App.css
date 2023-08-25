@@ -54,6 +54,10 @@ body {
 .read-the-docs {
   color: #888;
 }
+.primary-heading {
+  margin: 5px auto;
+  color: #fff;
+}
 
 /* ///////////////////////////////////// */
 /* Tracker Section */
@@ -106,10 +110,11 @@ body {
 }
 
 .tracker-results-container {
+  max-width: 1000px;
   position: absolute;
   z-index: 500;
-  top: 200px;
-  width: 70%;
+  top: 225px;
+  width: 75%;
   left: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -125,22 +130,47 @@ body {
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
 }
+.tracker-result-textbox:first-child,
+.tracker-result-textbox:nth-child(2),
+.tracker-result-textbox:nth-child(3) {
+  border-right: solid 1px var(--grey-color);
+  /* background-color: red; */
+}
 .tracker-result-textbox {
   text-align: left;
-  padding: 20px;
+  padding: 0px;
+  margin: 25px;
 }
 
 .result-title {
-  font-size: 18px;
+  font-size: 16px;
   color: var(--grey-color);
   margin: 5px 0;
 }
 .result-content {
-  font-size: 32px;
+  font-size: 22px;
   margin: 5px 0;
 }
 .tracker-map-container {
   z-index: 5;
   height: 600px;
   background-color: salmon;
+}
+
+.error-container {
+  display: flex;
+  margin: 10px;
+  background-color: #fff;
+  padding: 5px 20px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.error-text {
+  margin: 0;
+  font-size: 20px;
+  color: red;
 }
