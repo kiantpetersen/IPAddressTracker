@@ -27,7 +27,6 @@ function App() {
     fetch('https://httpbin.org/ip')
       .then(response => response.json())
       .then(data => {
-        // console.log('Data: ', data);
         setIp(data.origin)
         trackAddress(data.origin)
       });
@@ -41,18 +40,15 @@ function App() {
         return response.json();
       })
       .then(data => {
-        // console.log('Data: ', data.location.lat, data.location.lng)
         setData(data)
         setCoords([data.location.lat, data.location.lng])
       });
 
   }
   function validateIP(address) {
-    console.log("Address: ", address.split('.'))
     let addArr = address.split('.')
     let res = true
     if (addArr.length === 4) {
-      // console.log('True')
       addArr.forEach(num => {
         if (Number(num) > 0 && Number(num) < 256) {
           res = true
@@ -71,22 +67,17 @@ function App() {
 
 
     if (initIp.length) {
-      console.log('Init: ', initIp)
-      console.log('Init Ip: ', validateIP(initIp))
       APICall(initIp)
     } else {
       const flag = validateIP(searchIp)
-      // console.log('Hii Validate: ', )
       if (flag === false) {
         setErr(() => {
-          // console.log(validateIP)
           return { status: true, msg: 'Input Invalid: Please Enter a valid IP address' }
         })
         return
       } else {
         APICall(searchIp)
         setErr(() => {
-          // console.log(validateIP)
           return { status: false, msg: '' }
         })
       }
@@ -111,7 +102,6 @@ function App() {
         {errorMsg.status === true ? getErr() : null}
 
         <div className='search-container'>
-          {/* {console.log('Search: ', searchIp)} */}
           <input value={searchIp} onChange={handleChange} className='search-input' type='text' placeholder='Enter IP Address' />
           <button onClick={trackAddress} className='btn search-btn'><ion-icon name="chevron-forward-outline"></ion-icon></button>
         </div>
